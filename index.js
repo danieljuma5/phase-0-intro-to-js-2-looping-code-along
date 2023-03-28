@@ -1,18 +1,15 @@
 //Rewriting our for loop into a gift wrapping
 
-function writeCards(names,eventName) {
-  let messagesArray = [];
-  for (let i = names.length - 1; i >= 0; i--) {
-  
-  messagesArray.push(`Thank you, ${names[i]}, for the wonderful ${eventName} gift!`)
+function writeCards(names, eventName) {
+  let cards = []
+  for (const name of names){
+    cards.push(`Thank you, ${name}, for the wonderful ${eventName} gift!`)
+  }
+  return cards
 }
-console.log(messagesArray);
-}
-
 const attendees = ["Guadalupe", "Ollie", "Aki"];
 const eventName = "surprise";
 const result = writeCards(["Guadalupe", "Ollie", "Aki"],"surprise");
-
 
 //countdown function
 function countDown(num) {
